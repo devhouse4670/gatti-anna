@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-brand-bg: #0D0D0D;
+  --color-brand-card: #141414;
+  --color-brand-card-light: #1F1F1F;
+  --color-brand-accent: #FFC857;
+  --color-brand-secondary: #FF8A00;
+  --color-brand-muted: #A0A0A0;
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  /* Custom Glow Accents */
+  .amber-glow {
+    box-shadow: 0 0 30px rgba(255, 138, 0, 0.15);
+  }
+  .gold-glow {
+    box-shadow: 0 0 30px rgba(255, 200, 87, 0.15);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0D0D0D;
+  color: #FFFFFF;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0D0D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252525;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFC857;
+}
+
+/* Glassmorphism components */
+.glass-panel {
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Day Mode Variables & Styles */
+.light-theme {
+  --color-brand-bg: #F9F6F0;
+  --color-brand-card: #FFFFFF;
+  --color-brand-card-light: #F3ECE0;
+  --color-brand-muted: #6B6255;
+  background-color: #F9F6F0;
+  color: #1A130B;
+}
+
+.light-theme .glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Selection Highlight */
+::selection {
+  background: #FF8A00;
+  color: #0D0D0D;
+}
+

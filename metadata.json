@@ -1,0 +1,6 @@
+{
+  "name": "Gatti Anna",
+  "description": "Premium South Indian late-night dining experience in Pune. Explore our curated menu, rich legacy, and reserve a table.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
